@@ -1,0 +1,88 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="row">
+    <div class="col-sm-12">
+        <h6>Marca:</h6>
+        <select id="selectMarcas" class="form-control form-control-lg">
+            <option>Elige una opcion</option>
+        </select>
+    </div>
+    <div class="col-sm-12">
+        <h6>SubMarca:</h6>
+        <select id="selectSubMarca" class="form-control form-control-lg">
+            <option>Elige una opcion</option>
+        </select>
+    </div>
+    <div class="col-sm-12">
+        <h6>Modelo SubMarca</h6>
+        <select  id="selectModelSub" class="form-control form-control-lg">
+            <option>Elige una opcion</option>
+        </select>
+    </div>
+    <div class="col-sm-12">
+        <h6>Descripcion</h6>
+        <select id="selectDescripcion" class="form-control form-control-lg">
+            <option>Elige una opcion</option>
+        </select>
+    </div>
+    
+    <div class="col-sm-12">
+
+        <div class="form-group">
+            <h6>Codigo Postal:</h6>
+            <input type="number" class="form-control"  aria-describedby="emailHelp" placeholder="Codigo Postal" id="CP" onblur="getCP()">
+        </div>
+       
+    </div>
+    <div class="col-sm-12">
+        <div class="form-group">
+            <h6>Estado:</h6>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Estado" type="text" id="estado" disabled>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="form-group">
+            <h6>Municipio:</h6>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Municipio"  type="text" id="municipio" disabled />
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <h6>Colonia:</h6>
+        <select id="selectColonia" class="form-control form-control-lg">
+            <option>Elige una opcion</option>
+        </select>
+    </div>
+    <div class="col-sm-12">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="AbrirModal()">
+            Cotizar 
+        </button>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">falto por terminar :(</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+            me falto poder realcionar las descripciones con los modelos para poder cotizar de manera dinamica :(, tengo la nocion
+            de como relacionar los datos, no se si fue lo mas optimo pero por tiempo llegue hasta este punto :)
+            mantiene aun malas practicas como hardcoding en la parte de javascript, se puede solucionar con variables de entorno.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
